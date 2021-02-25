@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h3>FF15.GG</h3>
+    <h4>Get personalized insights about League of Legends!</h4>
+    <form method="post" action="/player">
+        <input name="summoner">
+        <select name="server">
+            <option value="default">Select server</option>
+            {% for k, v in servers.items() %}
+                <option value={{k}}>{{v}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Go!</button>
+    </form>
+</body>
+</html>
